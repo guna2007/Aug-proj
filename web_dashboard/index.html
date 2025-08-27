@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olist E-commerce Data Pipeline Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-title-icons">
+                <h1>
+                    <a href="https://github.com/guna2007/Aug-proj" target="_blank" class="header-title-link"
+                        title="View on GitHub">Olist E-commerce Data Pipeline</a>
+                </h1>
+                <nav class="social-links">
+                    <a href="https://github.com/guna2007/Aug-proj" target="_blank" title="GitHub Repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/guna-lankalapalli" target="_blank" title="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </nav>
+            </div>
+            <a href="https://www.linkedin.com/in/guna-lankalapalli" target="_blank" title="LinkedIn Profile">
+                <img src="profile-pic.jpeg" alt="Your Profile Picture" class="profile-pic clickable-profile">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="project-summary">
+            <div class="summary-content">
+                <div class="project-tagline">
+                    <span>From Raw Data to Business Impact</span>
+                    <div class="tagline-desc">Turning messy e-commerce data into clean, ML-ready insights to predict
+                        delivery delays and improve customer satisfaction.</div>
+                </div>
+                <h2>Project Overview</h2>
+                <div class="project-description">
+                    <p>
+                        This project showcases my journey of building a real-world data pipeline on the Olist E-commerce
+                        dataset. Starting from raw CSVs, I learned to clean, transform, and engineer features that
+                        capture the complexity of online retail — from product weight and dimensions to shipping
+                        distance, cost, and customer location. The pipeline outputs both business-ready datasets with
+                        visual insights and ML-ready CSVs designed to predict delivery delays.
+                    </p>
+                    <p>
+                        Along the way, I practiced core data handling with <b>NumPy</b> and <b>Pandas</b>, built
+                        business plots for customer and seller performance, and ensured data integrity through iterative
+                        debugging. Using an AI assistant as my co-developer, I also picked up frontend development
+                        basics to integrate these insights into a simple web interface.
+                    </p>
+                    <p>
+                        At its core, this project tackles a real business need: <b>understanding and reducing late
+                            deliveries</b>, a critical factor for customer satisfaction and operational efficiency.
+                    </p>
+                </div>
+                <div class="tech-stack">
+                    <h3>Key Technologies Used:</h3>
+                    <div class="tech-icons">
+                        <div class="tech-item" title="Python"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="tech-item" title="Pandas"><i class="fas fa-table"></i><span>Pandas</span></div>
+                        <div class="tech-item" title="Matplotlib/Seaborn"><i
+                                class="fas fa-chart-bar"></i><span>Plotting</span></div>
+                        <div class="tech-item" title="Jupyter Notebook"><i
+                                class="fab fa-python"></i><span>Jupyter</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="plots-heading">Visual Insights & Analysis</h2>
+
+        <div class="plots-grid">
+            <!-- All plot cards are now clickable and pass info to modal -->
+            <div class="plot-card" data-plot="delay_correlations">
+                <img src="graphs/basic_plots/delay_correlations.png" alt="Delay Correlations">
+                <div class="card-content">
+                    <h3>Delay Correlations</h3>
+                    <p>Shows how delivery delays correlate with other order features, highlighting key factors impacting
+                        late deliveries.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="delivery_time_distribution">
+                <img src="graphs/basic_plots/delivery_time_distribution.png" alt="Delivery Time Distribution">
+                <div class="card-content">
+                    <h3>Delivery Time Distribution</h3>
+                    <p>Visualizes the spread of delivery times, revealing most orders are delivered within a standard
+                        window, with some outliers.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="late_rate">
+                <img src="graphs/basic_plots/late_rate.png" alt="Late Delivery Rate">
+                <div class="card-content">
+                    <h3>Late Delivery Rate</h3>
+                    <p>Illustrates the percentage of orders delivered late, emphasizing operational bottlenecks and
+                        improvement areas.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="review_distribution">
+                <img src="graphs/basic_plots/review_distribution.png" alt="Review Score Distribution">
+                <div class="card-content">
+                    <h3>Review Score Distribution</h3>
+                    <p>Displays customer review scores, indicating overall satisfaction and areas needing attention.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="top_categories">
+                <img src="graphs/basic_plots/top_categories.png" alt="Top Product Categories">
+                <div class="card-content">
+                    <h3>Top Product Categories</h3>
+                    <p>Highlights the most popular product categories, guiding inventory and marketing strategies.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="eda_delay_by_seller">
+                <img src="graphs/business/eda_delay_by_seller.png" alt="Delay by Seller">
+                <div class="card-content">
+                    <h3>Delay by Seller</h3>
+                    <p>Identifies sellers with frequent delays, helping target vendor management efforts.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="eda_delay_by_state">
+                <img src="graphs/business/eda_delay_by_state.png" alt="Delay by State">
+                <div class="card-content">
+                    <h3>Delay by State</h3>
+                    <p>Maps delivery delays by state, revealing regional logistics challenges.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="eda_late_by_category">
+                <img src="graphs/business/eda_late_by_category.png" alt="Late Rate by Category">
+                <div class="card-content">
+                    <h3>Late Rate by Category</h3>
+                    <p>Shows which product categories have the highest late delivery rates, informing supply chain
+                        improvements.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="eda_late_by_payment">
+                <img src="graphs/business/eda_late_by_payment.png" alt="Late Rate by Payment Type">
+                <div class="card-content">
+                    <h3>Late Rate by Payment Type</h3>
+                    <p>Analyzes late deliveries by payment method, uncovering potential process inefficiencies.</p>
+                </div>
+            </div>
+            <div class="plot-card" data-plot="eda_monthly_trend">
+                <img src="graphs/business/eda_monthly_trend.png" alt="Monthly Order & Delay Trend">
+                <div class="card-content">
+                    <h3>Monthly Order & Delay Trend</h3>
+                    <p>Tracks order volume and delays over time, revealing seasonal patterns and trends.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for plot details -->
+        <div id="plotModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <img id="modalPlotImg" src="" alt="Plot" class="modal-plot-img">
+                <h3 id="modalPlotTitle"></h3>
+                <p id="modalPlotSummary"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <footer class="main-footer">
+            <div class="footer-content">
+                <span class="footer-year">&copy; August-2025</span>
+                <span class="footer-sep">|</span>
+                <a href="https://www.linkedin.com/in/guna-lankalapalli" target="_blank" class="footer-linkedin"
+                    title="Connect on LinkedIn">
+                    <span class="footer-name">Guna Lankalapalli</span>
+                </a>
+            </div>
+        </footer>
+    </footer>
+
+</body>
+
+</html>

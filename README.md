@@ -8,6 +8,7 @@ Delivering an end-to-end data pipeline and business analytics using the Olist da
 
 - **Objective**: Understand and model delivery delays using the Olist Brazilian E-Commerce dataset.
 - **Importance**: Provides insights into logistics performance, customer satisfaction, and business trends to inform operational decisions and future analytics (web dashboard).
+- **Business Context**: The pipeline not only cleans data but prepares ML-ready features (delivery times, geo distances, shipping costs) to support predictive modeling of late deliveries.
 
 Data source: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
@@ -20,7 +21,8 @@ Data source: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 - `scripts/`: Modular scripts for cleaning, feature engineering, EDA, and orchestration
 - `reports/`: Auto-generated plots and summaries (created at runtime)
 - `notebooks/`: Exploratory notebooks for ad hoc analyses
-- `web_dashboard/`: Optional dashboard artifacts (to be expanded in Phase 5)
+  - `web_dashboard/`: Optional dashboard artifacts (to be expanded in Phase 5)
+  - `docs/`: Documentation, including the data dictionary
 
 ---
 
@@ -99,6 +101,15 @@ python scripts/eda_business_plots.py
 - **Business-first narrative**: KPIs for late deliveries, delays by region and category, and payment correlations
 - **Modular pipeline**: Independent scripts orchestrated by a single entrypoint
 - **Ready for dashboard**: Stable, documented outputs for seamless integration into a Streamlit app
+- **Memory & Size Optimization**: Reduced dataset size from ~120MB raw Kaggle CSVs to ~45MB ML-ready processed data
+- **Performance Metrics**:
+  - Rows processed: ~100,000 orders
+  - Columns engineered: ~20 raw → 42 engineered features
+  - Business insights: delivery delays, category impact, regional delays
+
+## Data Dictionary
+
+A complete data dictionary for raw and processed datasets is available [here](docs/data_dictionary.md).
 
 ---
 
@@ -130,12 +141,35 @@ Contribute
 
 ## Deliverables
 
-- Final datasets
-  - `data/processed/final_ml_ready.csv`
-  - `data/processed/eda_business_ready.csv`
-  - `data/processed/olist_model_ready.csv`
-- Plots
-  - `reports/business/*.png` (e.g., category late rate, delay by state, payment vs delay, monthly trend)
+Final datasets
+
+- `data/processed/final_ml_ready.csv`
+- `data/processed/eda_business_ready.csv`
+- `data/processed/olist_model_ready.csv`
+  Plots
+- `reports/business/*.png` (e.g., category late rate, delay by state, payment vs delay, monthly trend)
+
+---
+
+## 🚀 Trinity Plan (Aug 2025)
+
+**Theme:** Real-world data prep, cleaning, and visualization.
+
+- ✅ Built an automated pipeline: raw → ML-ready CSVs.
+- ✅ Conducted EDA + created business-ready datasets & plots.
+- ✅ Developed static web dashboard (HTML/CSS/JS).
+- ✅ Reduced dataset size: 120MB raw → 45MB processed.
+- 🎯 Deliverables: `final_ml_ready.csv`, `eda_business_ready.csv`, reports/business/\*.png
+
+---
+
+## 🎯 Next Steps (Sept 2025)
+
+- Build machine learning model to **predict delivery delays** using ML-ready features (dimensions, weight, distance, shipping cost, etc.).
+- Expose predictions through a **REST API + Streamlit dashboard**.
+- Enable businesses to simulate "what-if" scenarios (e.g., cost/distance trade-offs).
+
+**Real-world factors:** weight, dimensions, distance, cost → features engineered → predictive model.
 
 ---
 
