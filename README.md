@@ -1,4 +1,3 @@
-
 # Olist E‑Commerce Data Pipeline
 
 Delivering an end-to-end data pipeline and business analytics using the Olist Brazilian E‑Commerce dataset.
@@ -7,10 +6,11 @@ Delivering an end-to-end data pipeline and business analytics using the Olist Br
 
 ## Project Overview
 
-- **Objective**: Understand and model delivery delays using the Olist Brazilian E‑Commerce dataset.
-- **Importance**: Insights into logistics performance, customer satisfaction, and business trends to inform operations and future analytics.
-- **Business Context**: The pipeline cleans, validates, and engineers ML‑ready features (delivery times, geo distances, shipping costs) to support predictive modeling of late deliveries.
-- **Data Source**: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+- **Objective**: Understand and model delivery delays using the Olist Brazilian E-Commerce dataset.
+- **Importance**: Provide actionable insights into logistics performance, customer satisfaction, and business trends to inform operations and future analytics.
+- **Business Context**: The pipeline cleans, validates, and engineers ML-ready features (delivery times, geo distances, shipping costs) to support predictive modeling of late deliveries.
+- **Deliverable**: A deployed [Olist Dashboard](https://olist-dashboard.vercel.app/) showcasing key business visualizations and insights generated from the processed pipeline outputs.
+- **Data Source**: [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 ---
 
@@ -151,6 +151,7 @@ python scripts/eda_business_plots.py
 - **Current implementation:** Static HTML/CSS/JS located in web_dashboard/
 - **How to view:** Open web_dashboard/index.html in a browser
 - **Assets:** Pre-generated plots under web_dashboard/graphs/ and reports/business/
+
 ---
 
 ## Data Dictionary
@@ -233,4 +234,3 @@ Project Link: [Aug-Project](https://github.com/guna2007/Aug-Project)
 This project demonstrates the full lifecycle of a real-world data pipeline: from raw data ingestion and cleaning, through feature engineering and business analytics, to web dashboard integration and predictive modeling readiness. The journey involved not just technical skills, but also iterative debugging, design thinking, and a focus on business impact.
 
 If you're a recruiter, data scientist, or engineer, this repository is designed to showcase practical skills, modular code, and a clear roadmap for future development. Contributions and feedback are welcome!
-
