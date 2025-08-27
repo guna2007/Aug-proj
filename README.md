@@ -1,47 +1,3 @@
-# Olist E‑Commerce Data Pipeline
-
-Delivering an end-to-end data pipeline and business analytics using the Olist Brazilian E‑Commerce dataset.
-
----
-
-## Project Overview
-
-- **Objective**: Understand and model delivery delays using the Olist Brazilian E‑Commerce dataset.
-- **Importance**: Insights into logistics performance, customer satisfaction, and business trends to inform operations and future analytics.
-- **Business Context**: The pipeline cleans, validates, and engineers ML‑ready features (delivery times, geo distances, shipping costs) to support predictive modeling of late deliveries.
-
-Data source: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
-
----
-
-## Key Outputs
-
-- **ML-Ready Dataset** → Final feature-engineered dataset prepared for delivery delay prediction.
-- **Business-Ready Dataset** → Cleaned and structured dataset optimized for BI and analytics use.
-- **Visualizations** → Core business plots highlighting sales performance, customer satisfaction, and delivery efficiency.
-
-📌 Note: Due to file size, the final CSVs are not stored in this repo. They are shared alongside the month-end LinkedIn project post.
-
----
-
-## Repository Structure
-
-<pre>
-olist_data_project/
-├─ data/
-│  └─ raw/                   # Original Kaggle CSVs (required input)
-├─ docs/
-│  └─ data_dictionary.md     # Data dictionary for raw and processed fields
-├─ notebooks/                # Exploratory notebooks (Phase1–4, etc.)
-├─ reports/                  # Generated plots and summaries (created at runtime)
-├─ scripts/                  # Modular pipeline scripts
-│  ├─ data_cleaning.py
-│  ├─ data_validation.py
-│  ├─ feature_engineering.py
-│  ├─ final_cleanup.py
-│  ├─ eda_summary.py
-│  ├─ eda_insights.py
-│  ├─ eda_plots.py
 
 # Olist E‑Commerce Data Pipeline
 
@@ -195,10 +151,6 @@ python scripts/eda_business_plots.py
 - **Current implementation:** Static HTML/CSS/JS located in web_dashboard/
 - **How to view:** Open web_dashboard/index.html in a browser
 - **Assets:** Pre-generated plots under web_dashboard/graphs/ and reports/business/
-- **Future enhancement:**
-  - Explore a Streamlit version using data/processed/ datasets and reports/business/ visuals for interactivity
-  - Suggested structure: `web_dashboard/app.py` (Streamlit entrypoint), `web_dashboard/assets/` for static assets
-
 ---
 
 ## Data Dictionary
@@ -282,6 +234,3 @@ This project demonstrates the full lifecycle of a real-world data pipeline: from
 
 If you're a recruiter, data scientist, or engineer, this repository is designed to showcase practical skills, modular code, and a clear roadmap for future development. Contributions and feedback are welcome!
 
-```
-
-```
